@@ -27,18 +27,9 @@ const artistSchema=mongoose.Schema({
     city:{
         type:String
     },
-    profile_url:{
+    url:{
         type:String
     },
-
-    product:[{
-        name:String,
-        id:String,
-        description:String,
-        image:String,
-        price:Number,
-        instock:Number
-    }],
     createdAt:{
         type:Date,
         default:Date.now()

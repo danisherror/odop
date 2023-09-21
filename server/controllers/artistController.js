@@ -83,3 +83,44 @@ exports.profile=BigPromise(async(req,res)=>{
         user
     })
 })
+exports.artistimage=BigPromise(async(req,res)=>{
+    try{
+    const token=req.params.token;
+    const decode=jwt.verify(token,process.env.JWT_SECRET)
+    const id=decode.id
+    // console.log(decode) 
+    
+    const user=await Artist.findByIdAndUpdate(id,
+        {
+          url:req.body.url
+        });
+    console.log(user);
+    console.log("--------------");
+    res.status(200).json({
+        
+    })
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+})
+exports.artistedit=BigPromise(async(req,res)=>{
+    try{
+    const token=req.params.token;
+    const decode=jwt.verify(token,process.env.JWT_SECRET)
+    // console.log(decode) 
+    const user=await Artist.findByIdAndUpdate(decode.id,req.body,{
+        new:true
+    });
+    console.log(user);
+    res.status(200).json({
+        
+    })
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+})
+

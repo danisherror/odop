@@ -14,3 +14,7 @@ app.listen(8000,()=>{
 
 const artist=require('./routes/artist')
 app.use("/api/artist",artist)
+
+
+const product=require('./routes/product')
+app.use("/api/product",product)
