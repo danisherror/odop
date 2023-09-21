@@ -65,7 +65,8 @@ exports.viewproduct=BigPromise(async(req,res)=>{
     const productExsist=await Product.findOne({artist:id})
 
     console.log("-------------------------------")
-    if(productExsist)
+    console.log(productExsist);
+    if(productExsist!=null)
     {
     console.log(productExsist)
     res.status(200).json(
@@ -73,6 +74,7 @@ exports.viewproduct=BigPromise(async(req,res)=>{
     )
     }
     else{
-        res.status(422).json();
+        console.log("no data");
+        res.status(422).json(null);
     }
 })

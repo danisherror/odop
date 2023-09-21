@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { NavLink } from 'react-router-dom';
+import { NavLink ,useHistory} from 'react-router-dom';
 import Navbbar from "./Navbbar"
 
 
 
 const ViewProduct = () => {
 
-
+    const history = useHistory("");
     const [getProductdata, setProductData] = useState([]);
     console.log("----------------");
     console.log("Array Size " + getProductdata?.length)
@@ -28,11 +28,13 @@ const ViewProduct = () => {
 
         if (res.status === 422 || !data) {
             alert("no product found");
+            console.log("no data")
+            //history.push(`/artisthome/${token}`);
 
         } else {
             setProductData(data)
-            console.log("get data");
-
+            console.log("get data1231");
+            
         }
     }
 

@@ -2,7 +2,7 @@ const mongoose=require('mongoose')
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 //name,email,phoneno,age,weight,height,address,city
-const artistSchema=mongoose.Schema({
+const userSchema=mongoose.Schema({
     name:{
         type:String
     },
@@ -30,10 +30,6 @@ const artistSchema=mongoose.Schema({
     url:{
         type:String
     },
-    verified:{
-        type:String,
-        default:"False"
-    },
     createdAt:{
         type:Date,
         default:Date.now()
@@ -41,24 +37,24 @@ const artistSchema=mongoose.Schema({
 
 })
 
-artistSchema.pre('save',async function(next){
+userSchema.pre('save',async function(next){
     if(!this.isModified('password')) return next()
     this.password=await bcrypt.hash(this.password,10) 
 })
 
-// artistSchema.methods.validatePassword=async function(sendPassword){
+// userSchema.methods.validatePassword=async function(sendPassword){
 //     return await bcrypt.compare(sendPassword,this.password)
 // }       
-artistSchema.methods.isValidatedPassword=async function(usersendPassword){
+userSchema.methods.isValidatedPassword=async function(usersendPassword){
     return await bcrypt.compare(usersendPassword,this.password)                // this will return true /false result
 }
 
-// artistSchema.methods.getjwtToken=()=>{
+// userSchema.methods.getjwtToken=()=>{
 //     return jwt.sign({id:this._id},process.env.JWT_SECRET,{
 //         expiresIn:process.env.JWT_EXPIRY
 //     })
 // }
-artistSchema.methods.getJwtToken=function(){
+userSchema.methods.getJwtToken=function(){
     return jwt.sign({id:this._id},process.env.JWT_SECRET,{
          expiresIn:process.env.JWT_EXPIRY
      })
@@ -66,4 +62,4 @@ artistSchema.methods.getJwtToken=function(){
 
 
 
-module.exports=mongoose.model('Artist',artistSchema)
+module.exports=mongoose.model('User',userSchema)

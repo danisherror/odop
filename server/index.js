@@ -18,3 +18,7 @@ app.use("/api/artist",artist)
 
 const product=require('./routes/product')
 app.use("/api/product",product)
+
+
+const user=require('./routes/user')
+app.use("/api/user",user)

@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 const AdminNavbar = () => {
-  const [getartistdata, setartistdata] = useState([]);
-  console.log(getartistdata);
+  const [getuserdata, setUserdata] = useState([]);
+  console.log(getuserdata);
 
   const { token } = useParams("token");
   console.log(token);
@@ -13,7 +13,7 @@ const AdminNavbar = () => {
 
   const getdata = async () => {
 
-    const res = await fetch(`/api/artist/profile/${token}`, {
+    const res = await fetch(`/api/user/userprofile/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -27,7 +27,7 @@ const AdminNavbar = () => {
       console.log("error ");
 
     } else {
-      setartistdata(data)
+      setUserdata(data)
       console.log("get data");
     }
   }
@@ -62,7 +62,7 @@ const AdminNavbar = () => {
             <img
               src="https://imgtr.ee/images/2023/05/31/1s6fi.jpg"
               height="35"
-              alt="idop Logo"
+              alt="odop Logo"
               loading="lazy"
             />
           </a>
@@ -71,17 +71,12 @@ const AdminNavbar = () => {
 
             <li class="nav-item">
 
-              <a class="nav-link" href={`/artisthome/${token}`}>Home</a>
+              <a class="nav-link" href={`/userhome/${token}`}>Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href={`http://localhost:3000/artistprofile/${token}`}> View Profile</a>
+              <a class="nav-link" href={`http://localhost:3000/userprofile/${token}`}> View Profile</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href={`http://localhost:3000/artistproduct/${token}`}> add product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href={`http://localhost:3000/artistviewproduct/${token}`}> view product</a>
-            </li>
+
 
             <li class="nav-item">
               <a class="nav-link" href="http://localhost:3000/">Logout</a>

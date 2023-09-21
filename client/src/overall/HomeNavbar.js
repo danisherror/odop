@@ -36,11 +36,19 @@ const HomeNavbar = () => {
                 <a class="nav-link" href="http://localhost:3000">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost:3000/signup">Signup</a>
+                <a class="nav-link" href="http://localhost:3000/artistsignup">ArtistSignup</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost:3000/signin">Signin</a>
+                <a class="nav-link" href="http://localhost:3000/artistsignin">ArtistSignin</a>
               </li>
+              <li class="nav-item">
+
+                <a class="nav-link" href="http://localhost:3000/usersignup">UserSignup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/usersignin">UserSignin</a>
+              </li>
+              
             </ul>
           </div>
         </div>
