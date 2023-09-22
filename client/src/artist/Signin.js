@@ -49,17 +49,14 @@ const Signinuser = () => {
         }
     }
   return (
-<div class="fullscreen-div">
-        <div>
-            <h2>
-              Your Work Counts!Enter Login details to list your products.
+<div class="fullscreen-div bimage">
+            <h1 class="textstyle-h1">
+                Already an existing artist!
+            </h1>
+            <h2 class="textstyle-h2">
+                Signin.
             </h2>
-        </div>
         <form class="form-signin">
-            <div class="form-group">
-                <h2>Login</h2>
-            </div>
-
             <div class="form-group">
                 <input type="email" class="form-control" value={inpval.email} onChange={setdata} name="email" required="" />
                 <label>Email</label>

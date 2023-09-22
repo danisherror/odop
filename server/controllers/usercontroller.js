@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
 const BigPromise=require('../middleware/bigpromise')
 const User=require('../models/user')
+const Product = require("../models/product");
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 
@@ -124,3 +125,26 @@ exports.imageadd=BigPromise(async(req,res)=>{
     }
 })
 
+exports.userproduct=BigPromise(async(req,res)=>{
+    
+    
+    const user=await Product.find();
+    
+    const ans=[];
+    for(let i=0;i<user.length;i++)
+    {
+        if(user[i].product.length>0)
+        {
+            //ans.push(user[i].product[0]);
+            for(let j=0;j<user[i].product.length;j++)
+            {
+                ans.push(user[i].product[j]);
+            }
+        }
+    }
+    console.log("\n\n\n\n\n\n\n\n\n\n\n\n");
+    console.log(ans);
+    res.status(200).json({
+        ans
+    })
+})

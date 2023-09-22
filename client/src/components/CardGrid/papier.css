@@ -1,0 +1,34 @@
+/* src/components/BlogPage.css */
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #993300; /* Papier-Mâché color */
+  }
+  
+  .blog-post {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+  }
+  .asdas{
+    height: 30px;
+  }

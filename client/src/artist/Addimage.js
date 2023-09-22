@@ -52,7 +52,7 @@ const Addimage = () => {
         <><Navbbar />
             <div className="container">
 
-                <h1>edit profile</h1>
+                <h1 class="textstyle-h1">edit profile</h1>
                 <form className="mt-4">
                     <div className="row">
                         <div class="mb-3 col-lg-6 col-md-6 col-12">

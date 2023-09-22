@@ -60,7 +60,7 @@ const AdminNavbar = () => {
 
           <a class="navbar-brand mt-2 mt-lg-0" href="">
             <img
-              src="https://imgtr.ee/images/2023/05/31/1s6fi.jpg"
+              src="http://res.cloudinary.com/dpywvy2za/image/upload/v1695362102/c9sutnglkc0yjyafdrwy.jpg"
               height="35"
               alt="odop Logo"
               loading="lazy"
@@ -75,6 +75,9 @@ const AdminNavbar = () => {
             </li>
             <li class="nav-item">
               <a class="nav-link" href={`http://localhost:3000/userprofile/${token}`}> View Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={`http://localhost:3000/userproduct/${token}`}> View Product</a>
             </li>
 
 

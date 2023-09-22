@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
-import Navbbar from "./Navbbar"
+import React, { useEffect, useState } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import Navbbar from "./Navbbar";
+import '../styles/external.css';
 const Artistedit = () => {
 
 
@@ -85,38 +86,46 @@ const Artistedit = () => {
 
 
     return (
-        <><Navbbar />
-            <div className="container">
+        <>
+        <Navbbar />
 
-                <h1>edit profile</h1>
-                <form className="mt-4">
-                    <div className="row">
-                        <div class="mb-3 col-lg-6 col-md-6 col-12">
+            <div className="belownav-artist">
+                <h1 class="textstyle-h1">edit profile</h1>
+                <form className="form-signin">
+                    
+                        <div class="form-control">
                             <label for="exampleInputEmail1" class="form-label">Name</label>
-                            <input type="text" value={inpval.name} onChange={setdata} name="name" class="form-control" token="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <input type="text" class="form-group" value={inpval.name} onChange={setdata} name="name" token="exampleInputEmail1" aria-describedby="emailHelp" />
                         </div>
-                        <div class="mb-3 col-lg-6 col-md-6 col-12">
+
+                        <div class="form-control">
                             <label for="exampleInputPassword1" class="form-label">email</label>
-                            <input type="email" value={inpval.email} onChange={setdata} name="email" class="form-control" id="exampleInputPassword1" />
+                            <input type="email" class="form-group" value={inpval.email} onChange={setdata} name="email" id="exampleInputPassword1" />
                         </div>
-                        <div class="mb-3 col-lg-6 col-md-6 col-12">
+
+                        <div class="form-control">
                             <label for="exampleInputPassword1" class="form-label">phoneno</label>
-                            <input type="number" value={inpval.phoneno} onChange={setdata} name="phoneno" class="form-control" id="exampleInputPassword1" />
+                            <input type="number" class="form-group" value={inpval.phoneno} onChange={setdata} name="phoneno" id="exampleInputPassword1" />
                         </div>
-                        <div class="mb-3 col-lg-6 col-md-6 col-12">
+
+                        <div class="form-control">
                             <label for="exampleInputPassword1" class="form-label">age</label>
-                            <input type="number" value={inpval.age} onChange={setdata} name="age" class="form-control" id="exampleInputPassword1" />
+                            <input type="number" class="form-group" value={inpval.age} onChange={setdata} name="age" id="exampleInputPassword1" />
                         </div>
-                        <div class="mb-3 col-lg-12 col-md-12 col-12">
+
+                        <div class="form-control">
                             <label for="exampleInputPassword1" class="form-label">address</label>
-                            <input type="text" value={inpval.address} onChange={setdata} name="address" class="form-control" id="exampleInputPassword1" />
+                            <input type="text" class="form-group" value={inpval.address} onChange={setdata} name="address"  id="exampleInputPassword1" />
                         </div>
-                        <div class="mb-3 col-lg-12 col-md-12 col-12">
+
+                        <div class="form-control">
                             <label for="exampleInputPassword1" class="form-label">city</label>
-                            <input type="text" value={inpval.city} onChange={setdata} name="city" class="form-control" id="exampleInputPassword1" />
+                            <input type="text" class="form-group" value={inpval.city} onChange={setdata} name="city"  id="exampleInputPassword1" />
                         </div>
+
+                        <div class="form-control">
                         <button type="submit" onClick={updateartistdata} class="btn btn-primary">Submit</button>
-                    </div>
+                        </div>
                 </form>
             </div>
         </>

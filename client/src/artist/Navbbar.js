@@ -60,7 +60,7 @@ const AdminNavbar = () => {
 
           <a class="navbar-brand mt-2 mt-lg-0" href="">
             <img
-              src="https://imgtr.ee/images/2023/05/31/1s6fi.jpg"
+              src="http://res.cloudinary.com/dpywvy2za/image/upload/v1695362102/c9sutnglkc0yjyafdrwy.jpg"
               height="35"
               alt="idop Logo"
               loading="lazy"

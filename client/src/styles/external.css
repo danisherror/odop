@@ -1,46 +1,108 @@
 .form-signin {
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
-    margin: 0 auto;
-  }
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: 0 auto;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Create a div that covers the whole page */
+.fullscreen-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   /* You can set the background color or background image here */
+  color: white; /* Text color on the div */
   
-  /* Create a div that covers the whole page */
-  .fullscreen-div {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:url("../images/handi.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-     /* You can set the background color or background image here */
-    color: white; /* Text color on the div */
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
-.body-style
+.bimage{
+  background-image:url("../images/handi.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.bimage1{
+background-image:url("../images/handi1.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+}
+
+.belownav{
+background-image: url('../images/papm.jpg');
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+overflow: hidden;
+height: 600px; 
+color:white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.belownav-artist{
+background-image: url('../images/handi.jpg');
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+overflow: hidden;
+height: 600px; 
+color:white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.belownav-user{
+background-image: url('../images/handi1.jpg');
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+overflow: hidden;
+height: 600px; 
+color:white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.tableclass{
+background-color:white;
+}
+
+.thclass
 {
-    /* background-image:url("../images/jkimage.jpeg"); */
-    /* background-size:cover;
-    background-repeat:no-repeat; */
+text-align:center;
+color:black;
+}
 
-    top: 0;
-    left: 0;
-    width: 100%;
-    
-    background-color:blue;
-    margin-bottom:0;
+.tdclass
+{
+text-align:center;
+color:black;
+}
 
+.textstyle-h1
+{
+font-family: Lobster;
+font-size:50px;
+}
+
+.textstyle-h2
+{
+font-family: Lobster;
+font-size:30px;
 }

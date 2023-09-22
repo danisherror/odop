@@ -48,34 +48,24 @@ const ViewProduct = () => {
     return (
         <>
             <Navbbar />
-            <div>
-                <table class="table table-bordered table-hover">
+            <div class="belownav-artist">
+                <table class="table table-bordered table-hover tableclass">
                     <tbody>
                         <tr>
-                            <td >
-                                <div class="text-center">
+                            <td class="tdclass">
                                     name
-                                </div>
                             </td>
-                            <td >
-                                <div class="text-center">
+                            <td class="tdclass">
                                     description
-                                </div>
                             </td>
-                            <td >
-                                <div class="text-center">
+                            <td class="tdclass">
                                     price
-                                </div>
                             </td>
-                            <td >
-                                <div class="text-center">
+                            <td class="tdclass">
                                     instock
-                                </div>
                             </td>
-                            <td >
-                                <div class="text-center">
+                            <td class="tdclass">
                                     image
-                                </div>
                             </td>
                         </tr>
                         {
@@ -84,32 +74,26 @@ const ViewProduct = () => {
                                 return (
                                     <>
                                         <tr>
-                                            <td >
-                                                <div class="text-center">
+                                            <td class="tdclass">
                                                     {element.name}
-                                                </div>
-                                            </td>
-                                            <td >
-                                                <div class="text-center">
-                                                    {element.description}
-                                                </div>
-                                            </td>
-                                            <td >
-                                                <div class="text-center">
-                                                    {element.price}
-                                                </div>
-                                            </td>
-                                            <td >
-                                                <div class="text-center">
-                                                    {element.instock}
-                                                </div>
-                                            </td>
-                                            <td >
-                                                <div class="text-center">
-                                                    <img src={element.url} style={{ width: 150, height: 150 }} alt="profile" />
-                                                </div>
-                                            </td>
 
+                                            </td>
+                                            <td class="tdclass">
+                                                    {element.description}
+
+                                            </td>
+                                            <td class="tdclass">
+                                                    {element.price}
+
+                                            </td>
+                                            <td class="tdclass">
+                                                    {element.instock}
+
+                                            </td>
+                                            <td class="tdclass">
+                                                    <img src={element.url} style={{ width: 150, height: 150 }} alt="profile" />
+
+                                            </td>
                                         </tr>
                                     </>
                                 )

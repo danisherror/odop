@@ -28,6 +28,10 @@ const Products = mongoose.Schema({
             instock: {
                 type: Number
             },
+            selled:{
+                type:Number,
+                default:0
+            },
             url:{
                 type:String
             }

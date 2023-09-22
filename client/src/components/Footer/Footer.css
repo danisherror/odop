@@ -1,0 +1,80 @@
+/* Footer.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px; /* Adjust the gap between social media icons */
+}
+
+.social-media-card {
+  display: flex;
+}
+
+.social-media-icon {
+  margin-right: 10px; /* Adjust the space between individual icons */
+}
+
+.social-media-icon a img {
+  width: 30px; /* Adjust the icon size as needed */
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-media-icon a img:hover {
+  transform: scale(1.2); /* Add a hover effect to the icons */
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row; /* Make items horizontal */
+  align-items: center;
+  margin-top: 10px; /* Add some spacing between links and social icons */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px; /* Add spacing between individual links */
+}
+
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Add some spacing between links and social icons */
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.newsletter-form button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #ff4500;
+}

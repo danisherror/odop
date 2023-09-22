@@ -74,42 +74,32 @@ const Addproduct = () => {
 
   return (
     <><Navbbar />
-      <div class="login-box">
-
-        <h2>product add</h2>
-        <form>
-          <div class="user-box">
-            <input type="text" value={inpval.name} onChange={setdata} name="name" required="" />
+      <div class="belownav-artist bimage">
+        <h1>add your products</h1>
+        <form class="form-signin">
+          <div class="form-control">
+            <input type="text" class ="form-group" value={inpval.name} onChange={setdata} name="name" required="" />
             <label>Name</label>
           </div>
-          <div class="user-box">
-            <input type="text" value={inpval.description} onChange={setdata} name="description" required="" />
+          <div class="form-control">
+            <input type="text" class ="form-group" value={inpval.description} onChange={setdata} name="description" required="" />
             <label>description</label>
           </div>
-          <div class="user-box">
-            <input type="number" value={inpval.price} onChange={setdata} name="price" required="" />
+          <div class="form-control">
+            <input type="number" class ="form-group" value={inpval.price} onChange={setdata} name="price" required="" />
             <label>price</label>
           </div>
-          <div class="user-box">
-            <input type="number" value={inpval.instock} onChange={setdata} name="instock" required="" />
+          <div class="form-control">
+            <input type="number" class ="form-group" value={inpval.instock} onChange={setdata} name="instock" required="" />
             <label>instock</label>
           </div>
-          <div class="user-box">
+          <div class="form-control">
             <label>pic</label>
-            <input type="file" onChange={(e) => setImage(e.target.files[0])}></input>
+            <input type="file" class ="form-group" onChange={(e) => setImage(e.target.files[0])}></input>
           </div>
-
-
-          <button class="btn-sub" type="submit" onClick={addartistproduct} >
-            <a>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Submit
-            </a>
+          <button class="btn btn-primary" type="submit" onClick={addartistproduct} >
+            submit.
           </button>
-
         </form>
       </div>
     </>

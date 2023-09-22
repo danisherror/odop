@@ -52,7 +52,7 @@ const ArtistDetail = () => {
         <>
             <Navbbar />
 
-            <div className="container mt-3">
+            <div className="container mt-3 belownav-artist">
                 <Card>
                     {/* sx={{ maxWidth: 100% }} */}
                     <CardContent >

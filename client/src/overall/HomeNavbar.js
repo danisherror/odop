@@ -3,7 +3,7 @@ import React from 'react'
 import Homebody from './Homebody';
 const HomeNavbar = () => {
   return (
-    <>
+    <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <div class="container-fluid">
@@ -33,11 +33,15 @@ const HomeNavbar = () => {
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="http://localhost:3000">Home</a>
+                <a class="nav-link" href="http://localhost:3000">mart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="http://localhost:3000/artistsignup">ArtistSignup</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="http://localhost:3000/artistsignin">ArtistSignin</a>
               </li>
@@ -54,7 +58,7 @@ const HomeNavbar = () => {
         </div>
       </nav>
       <Homebody />
-    </>
+    </div>
 
   )
 }

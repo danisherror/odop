@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import '../styles/external.css';
+
+
 const RegisterArtist = () => {
   const history = useHistory("");
 
@@ -52,32 +55,30 @@ const RegisterArtist = () => {
 
   return (
 
-    <div class="login-box">
-      <h2>Signup</h2>
+    <div class="fullscreen-div bimage">
+            <h1 class="textstyle-h1">
+            Your Work Counts!
+            </h1>
+            <h2 class="textstyle-h2">
+              Signup
+            </h2>
       <form>
-        <div class="user-box">
-          <input type="text" value={inpval.name} onChange={setdata} name="name" required="" />
+        <div class="form-signin">
+          <input type="text" class="form-control" value={inpval.name} onChange={setdata} name="name" required="" />
           <label>Name</label>
         </div>
-        <div class="user-box">
-          <input type="email" value={inpval.email} onChange={setdata} name="email" required="" />
+        <div class="form-signin">
+          <input type="email" class="form-contorl" value={inpval.email} onChange={setdata} name="email" required="" />
           <label>Email</label>
         </div>
-        <div class="user-box">
-          <input type="password" value={inpval.password} onChange={setdata} name="password" required="" />
+        <div class="form-signin">
+          <input type="password" class="form-control" value={inpval.password} onChange={setdata} name="password" required="" />
           <label>Password</label>
         </div>
 
-        <button class="btn-sub" type="submit" onClick={addinpdata} >
-          <a>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="btn btn-primary" type="submit" onClick={addinpdata} >
             Submit
-          </a>
         </button>
-
       </form>
     </div>
   )

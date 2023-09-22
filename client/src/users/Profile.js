@@ -60,8 +60,8 @@ const UserDetails = () => {
     return (
         <>
             <Navbbar />
-            <div className="container mt-3">
-                <Card sx={{ maxWidth: 800 }} >
+            <div className="belownav-user">
+                <Card  >
                     <CardContent >
                         <div className="row">
                             <div className="left_view col-lg-6 col-md-6 col-12">

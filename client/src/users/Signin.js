@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import '../styles/external.css';
 
 const SigninUser = () => {
   const history = useHistory("");
@@ -48,34 +49,28 @@ const SigninUser = () => {
   }
   return (
 
-    <div id="container-main">
-      <div class="login-box">
-
-        <h2>Login</h2>
-
-        <form>
-          <div class="user-box">
-            <input type="email" value={inpval.email} onChange={setdata} name="email" required="" />
+    <div class="fullscreen-div bimage1">
+        <h1 class="textstyle-h1">
+            Already an existeing user!
+        </h1>
+        <h2 class="textstyle-h2">
+            Signin.
+        </h2>
+        <form class="form-signin">
+          <div class="form-group">
+            <input type="email" class="form-control" value={inpval.email} onChange={setdata} name="email" required="" />
             <label>Email</label>
           </div>
           <br />
-          <div class="user-box">
-            <input type="password" value={inpval.password} onChange={setdata} name="password" required="" />
+          <div class="form-group">
+            <input type="password" class="form-control" value={inpval.password} onChange={setdata} name="password" required="" />
             <label>Password</label>
           </div>
-          <button class="btn-sub" type="submit" onClick={addinpdata}>
-            <a>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Submit
-            </a>
+          <button class="btn btn-primary" type="submit" onClick={addinpdata}>
+            Submit
           </button>
         </form>
-      </div>
     </div>
-
   )
 }
 

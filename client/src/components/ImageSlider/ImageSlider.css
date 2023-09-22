@@ -1,0 +1,36 @@
+/* src/components/ImageSlider.css */
+
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  color: #333;
+}
+
+.image-container {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-button:first-child {
+  position: absolute;
+  left: 10px;
+}
+
+.nav-button:last-child {
+  position: absolute;
+  right: 10px;
+}

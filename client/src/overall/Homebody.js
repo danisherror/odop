@@ -2,9 +2,11 @@ import React from 'react'
 const Signinuser = () => {
 
   return (
-    <>
-      this is main body
-    </>
+    <div class="belownav">
+      <h1>
+        Main body content.
+      </h1>
+    </div>
   )
 }
 

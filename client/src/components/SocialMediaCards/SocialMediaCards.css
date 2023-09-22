@@ -1,0 +1,29 @@
+/* src/components/SocialMediaCards.css */
+
+.social-media-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  
+  .social-media-icon {
+    text-align: center;
+  }
+  
+  .social-media-icon img {
+    width: 50px; /* Adjust the image size as needed */
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .social-media-icon a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  

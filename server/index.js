@@ -19,6 +19,9 @@ app.use("/api/artist",artist)
 const product=require('./routes/product')
 app.use("/api/product",product)
 
+const admin=require('./routes/admin')
+app.use("/api/admin",admin)
+
 
 const user=require('./routes/user')
 app.use("/api/user",user)
