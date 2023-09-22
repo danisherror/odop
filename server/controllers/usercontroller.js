@@ -148,3 +148,69 @@ exports.userproduct=BigPromise(async(req,res)=>{
         ans
     })
 })
+exports.useraddcart=BigPromise(async(req,res)=>{
+    try{
+    const token=req.params.token;
+    const decode=jwt.verify(token,process.env.JWT_SECRET)
+    const user=await User.findById(decode.id);
+    const {id}=req.body
+    console.log(id);
+    if(user)
+    {
+        const prevcart=user.cart;
+        prevcart.push(id);
+        const newData={
+            user:decode.id,
+            cart:prevcart
+        }
+        await User.findByIdAndUpdate(decode.id,newData)
+
+        res.status(200).json({
+            success:true
+        })
+    }
+    else
+    {
+        res.status(422).json({
+            success:true
+        })
+    }
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+})
+exports.usercart=BigPromise(async(req,res)=>{
+    try{
+    const token=req.params.token;
+    const decode=jwt.verify(token,process.env.JWT_SECRET)
+    const user=await User.findById(decode.id);
+    const {id}=req.body
+    console.log(id);
+    if(user)
+    {
+        const prevcart=user.cart;
+        prevcart.push(id);
+        const newData={
+            user:decode.id,
+            cart:prevcart
+        }
+        await User.findByIdAndUpdate(decode.id,newData)
+
+        res.status(200).json({
+            success:true
+        })
+    }
+    else
+    {
+        res.status(422).json({
+            success:true
+        })
+    }
+    }
+    catch(error)
+    {
+        console.log(error);
+    }
+})

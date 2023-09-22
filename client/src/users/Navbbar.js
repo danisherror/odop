@@ -64,6 +64,7 @@ const AdminNavbar = () => {
               height="35"
               alt="odop Logo"
               loading="lazy"
+              class="navbarimg"
             />
           </a>
 
@@ -78,6 +79,9 @@ const AdminNavbar = () => {
             </li>
             <li class="nav-item">
               <a class="nav-link" href={`http://localhost:3000/userproduct/${token}`}> View Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={`http://localhost:3000/usercart/${token}`}> View cart</a>
             </li>
 
 

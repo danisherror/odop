@@ -1,0 +1,58 @@
+/* UserDetails.css */
+
+/* Style the card grid */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Style individual embossed cards */
+.embossed-card {
+    flex: 0 0 calc(33.33% - 20px); /* Three cards in one line with spacing */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.embossed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style card images */
+.card-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Style card content */
+.card-content {
+    padding: 16px;
+}
+
+/* Style typography */
+.card h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card body2 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card p {
+    margin: 8px 0;
+}

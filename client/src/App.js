@@ -25,6 +25,7 @@ import UserProfile from "./users/Profile";
 import Userimage from './users/Addimage';
 import Useredit from "./users/Enterudata";
 import UserProduct from "./users/Product";
+import Usercart from "./users/Viewcart"
 
 
 import AdminSignin from "./admin/Signin";
@@ -55,6 +56,7 @@ function App() {
       <Route exact path="/userimage/:token" component={Userimage} />
       <Route exact path="/useredit/:token" component={Useredit} />
       <Route exact path="/userproduct/:token" component={UserProduct} />
+      <Route exact path="/usercart/:token" component={Usercart} />
 
 
       <Route exact path="/adminsignin" component={AdminSignin} />

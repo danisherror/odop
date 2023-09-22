@@ -30,6 +30,16 @@ const userSchema=mongoose.Schema({
     url:{
         type:String
     },
+    cart:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            number_of_item:{
+                type: Number
+            },
+            
+        }
+
+    ],
     createdAt:{
         type:Date,
         default:Date.now()

@@ -64,6 +64,7 @@ const AdminNavbar = () => {
               height="35"
               alt="idop Logo"
               loading="lazy"
+              class="navbarimg"
             />
           </a>
 

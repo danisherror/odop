@@ -154,7 +154,7 @@ const UserDetails = () => {
   const { token } = useParams('token');
 
   const getdata = async () => {
-    const res = await fetch(`/api/user/userproduct/${token}`, {
+    const res = await fetch(`/api/user/usercart/${token}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -176,27 +176,7 @@ const UserDetails = () => {
     getdata();
   }, []);
 
-  const addinpdata = async (id) => {
-    const res = await fetch(`/api/user/useraddcart/${token}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        id,
-      }),
-    });
-
-    const data = await res.json();
-
-    if (res.status === 422) {
-      console.log('error');
-      alert('error1');
-    } else {
-      alert('added');
-      console.log('data added');
-    }
-  };
+  
 
   return (
     <>
@@ -206,25 +186,7 @@ const UserDetails = () => {
       <br />
       <br />
       <br />
-      {/* <div>
-        {getuserdata.map((card, index) => (
-          <div key={index} className="card">
-            <h1>name:{card.name}</h1>
-            <h1>desc:{card.description}</h1>
-            <img src={card.url} style={{ width: 100, height: 100 }} alt="profile" />
-            <h1>price:{card.price}</h1>
-            <h1>selled:{card.selled}</h1>
-            <h1>instock:{card.instock}</h1>
-            <button
-              type="submit"
-              onClick={() => addinpdata(card._id)} // Pass the _id to the addinpdata function
-              className="btn btn-primary"
-            >
-              add to cart
-            </button>
-          </div>
-        ))}
-      </div> */}
+      
       <div className="card-grid">
         {getuserdata.map((card, index) => (
           <Card key={index} className="embossed-card">
@@ -245,13 +207,7 @@ const UserDetails = () => {
               <Typography variant="body2" color="text.secondary">
                 In Stock: {card.instock}
               </Typography>
-              <button
-                type="submit"
-                onClick={() => addinpdata(card._id)} // Pass the _id to the addinpdata function
-                className="btn btn-primary"
-              >
-                add to cart
-              </button>
+              
             </CardContent>
           </Card>
         ))}
